@@ -1,6 +1,6 @@
 import psycopg2
 
-conn_params = {
+connectionParameters = {
     'dbname': 'COMP3005a3',
     'user': 'postgres',
     'password': 'postgres',
@@ -10,7 +10,7 @@ conn_params = {
 def connect():
     conn = None
     try:
-        conn = psycopg2.connect(**conn_params)
+        conn = psycopg2.connect(**connectionParameters)
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
     return conn
